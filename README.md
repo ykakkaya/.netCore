@@ -1,0 +1,2 @@
+# .netCore
+.net core çalışmaları
