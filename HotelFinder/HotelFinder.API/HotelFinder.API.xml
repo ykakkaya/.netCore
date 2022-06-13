@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HotelFinder.API</name>
+    </assembly>
+    <members>
+        <member name="M:HotelFinder.API.Controllers.HotelsController.Get">
+            <summary>
+            tüm hotelleri getirir
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HotelFinder.API.Controllers.HotelsController.GetHotelById(System.Int32)">
+            <summary>
+            id si verilen hoteli getirir
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelFinder.API.Controllers.HotelsController.GetHotelByName(System.String)">
+            <summary>
+            name'e göre Hotel getirir
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelFinder.API.Controllers.HotelsController.PostHotel(HotelFinder.Entities.Hotel)">
+            <summary>
+            hotel ekleme
+            </summary>
+            <param name="hotel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelFinder.API.Controllers.HotelsController.PutHotel(HotelFinder.Entities.Hotel)">
+            <summary>
+            hotel güncelleme
+            </summary>
+            <param name="hotel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelFinder.API.Controllers.HotelsController.DeleteHotel(System.Int32)">
+            <summary>
+            hotel silme
+            </summary>
+            <param name="id"></param>
+        </member>
+    </members>
+</doc>
