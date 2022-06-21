@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CVykModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TBLAnasayfa">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AnasayfaAcıklama" Type="varchar(max)" />
+          <Property Name="AnasayfaAcıklama2" Type="varchar(max)" />
+          <Property Name="AnasayfaAcıklama3" Type="varchar(max)" />
+          <Property Name="AdSoyad" Type="varchar" MaxLength="50" />
+          <Property Name="İsTanımı" Type="varchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="TBLIletisimBilgi">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GoogleKonum" Type="varchar" MaxLength="350" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Adress" Type="varchar" MaxLength="150" />
+          <Property Name="Telefon" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="TBLIletisimForm">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NAME" Type="varchar" MaxLength="50" />
+          <Property Name="EMAIL" Type="varchar" MaxLength="50" />
+          <Property Name="MESSAGE" Type="varchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="TBLMenu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MENU" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TBLResimler">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Resim" Type="varchar" MaxLength="50" />
+          <Property Name="ResimYolu" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="TBLYetenekler">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Yetenekler" Type="varchar" MaxLength="50" />
+          <Property Name="YetenekOranı" Type="int" />
+        </EntityType>
+        <EntityContainer Name="CVykModelStoreContainer">
+          <EntitySet Name="TBLAnasayfa" EntityType="Self.TBLAnasayfa" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLIletisimBilgi" EntityType="Self.TBLIletisimBilgi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLIletisimForm" EntityType="Self.TBLIletisimForm" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLMenu" EntityType="Self.TBLMenu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLResimler" EntityType="Self.TBLResimler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLYetenekler" EntityType="Self.TBLYetenekler" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CVykModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TBLAnasayfa">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AnasayfaAcıklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="AdSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="İsTanımı" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="AnasayfaAcıklama2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="AnasayfaAcıklama3" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TBLIletisimBilgi">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GoogleKonum" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Adress" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Telefon" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TBLIletisimForm">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MESSAGE" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TBLMenu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MENU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TBLResimler">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Resim" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ResimYolu" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TBLYetenekler">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Yetenekler" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="YetenekOranı" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="CVykEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TBLAnasayfa" EntityType="Self.TBLAnasayfa" />
+          <EntitySet Name="TBLIletisimBilgi" EntityType="Self.TBLIletisimBilgi" />
+          <EntitySet Name="TBLIletisimForm" EntityType="Self.TBLIletisimForm" />
+          <EntitySet Name="TBLMenu" EntityType="Self.TBLMenu" />
+          <EntitySet Name="TBLResimler" EntityType="Self.TBLResimler" />
+          <EntitySet Name="TBLYetenekler" EntityType="Self.TBLYetenekler" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CVykModelStoreContainer" CdmEntityContainer="CVykEntities">
+          <EntitySetMapping Name="TBLAnasayfa">
+            <EntityTypeMapping TypeName="CVykModel.TBLAnasayfa">
+              <MappingFragment StoreEntitySet="TBLAnasayfa">
+                <ScalarProperty Name="AnasayfaAcıklama3" ColumnName="AnasayfaAcıklama3" />
+                <ScalarProperty Name="AnasayfaAcıklama2" ColumnName="AnasayfaAcıklama2" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="AnasayfaAcıklama" ColumnName="AnasayfaAcıklama" />
+                <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+                <ScalarProperty Name="İsTanımı" ColumnName="İsTanımı" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLIletisimBilgi">
+            <EntityTypeMapping TypeName="CVykModel.TBLIletisimBilgi">
+              <MappingFragment StoreEntitySet="TBLIletisimBilgi">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="GoogleKonum" ColumnName="GoogleKonum" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Adress" ColumnName="Adress" />
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLIletisimForm">
+            <EntityTypeMapping TypeName="CVykModel.TBLIletisimForm">
+              <MappingFragment StoreEntitySet="TBLIletisimForm">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="MESSAGE" ColumnName="MESSAGE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLMenu">
+            <EntityTypeMapping TypeName="CVykModel.TBLMenu">
+              <MappingFragment StoreEntitySet="TBLMenu">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MENU" ColumnName="MENU" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLResimler">
+            <EntityTypeMapping TypeName="CVykModel.TBLResimler">
+              <MappingFragment StoreEntitySet="TBLResimler">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Resim" ColumnName="Resim" />
+                <ScalarProperty Name="ResimYolu" ColumnName="ResimYolu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLYetenekler">
+            <EntityTypeMapping TypeName="CVykModel.TBLYetenekler">
+              <MappingFragment StoreEntitySet="TBLYetenekler">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Yetenekler" ColumnName="Yetenekler" />
+                <ScalarProperty Name="YetenekOranı" ColumnName="YetenekOranı" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
